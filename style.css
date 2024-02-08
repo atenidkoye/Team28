@@ -1,0 +1,130 @@
+body {
+    background-color: #f1e8dd;
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    text-align:left;
+}
+
+img {
+    height: 500px;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.spn {
+    color: red;
+}
+
+.product {
+    padding: 40px;
+    /* margin-top: 5px; */
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+.products {
+    display: flex;
+    padding: 40px;
+    /* margin-top: 5pxpx; */
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+
+
+.Featured {
+    text-align: center;
+    align-items: center;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: larger;
+    font-style: italic;
+    color: bisque;
+}
+
+h6{
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-weight: 100px;
+    /* font-style: oblique; */
+    font-size: large;
+    color: #fff;
+}
+
+span{
+    color: #d90045;
+}
+.btn button {
+    padding: 14px 30px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+    display: inline-block;
+    background: #ff004f;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn button:hover {
+    background-color: #d90045;
+}
+
+
+        .container {
+            max-width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: darkblue;
+        }
+        
+        label {
+            font-weight: bold;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        
+        textarea {
+            height: 100px;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+        
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    
