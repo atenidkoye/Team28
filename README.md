@@ -1,7 +1,7 @@
 # WELCOME TO TEAM28 CRUD APP
 
 # A brief description of your web development project.
-We have an online flower shop where where customers can browse and purchase a variety of floral arrangements and gifts for various occasions such as birthdays, anniversaries, weddings, or special events. Customers can conveniently place orders and make payments online.
+We have an online flower shop where customers can browse and purchase a variety of floral arrangements and gifts for various occasions such as birthdays, anniversaries, weddings, or special events. Customers can conveniently place orders and make payments online.
 
 
 ## Table of Contents
