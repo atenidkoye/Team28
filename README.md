@@ -6,21 +6,21 @@ We have an online flower shop where customers can browse and purchase a variety 
 
 ## Table of Contents
 - [Features](#features)
-- 1. Search Option : Customers can browse flowers of their choice from the list of our catalog
-  2. Account Creation: Customers are welcomed to create accounts with us and make their shopping easy
+- 1. Search Option 
+  2. Account Creation
   3. Cart: Customers can add as many items inside their shopping cart
   4. Payment method: Customers are provided with a secure channel of making payments
 - [Database Tables](#database-tables)
-- customer_info Table
-- Catalog Table
-- Price Table
-- Cart Table
+- customer Table
+- Orders Table
+- Products Table
+- Payment Table
 - 
 - [Created Forms](#created-forms)
-- customer_info Form
-- Catalog Form
-- Price Form
-- Cart Form
+- customer Form
+- Orders Form
+- Products Form
+- Payment Form
 - [Created Tables](#created-tables)
 
 ---
@@ -29,9 +29,9 @@ We have an online flower shop where customers can browse and purchase a variety 
 
 In this section, list and describe the features or functionality that you are working on. You can use checkboxes to track the progress of each feature.
 
-- [ ] Feature 1 (Full Name): Title of the feature. 
-- [ ] Feature 2 (Full Name): Title of the feature.
-- [ ] Feature 3 (Full Name): Title of the feature.
+- [ ] Feature 1 (Full Name): Search Option. 
+- [ ] Feature 2 (Full Name): Sign Up/ Sign In.
+- [ ] Feature 3 (Full Name): Payment method.
 
 > Add features as required. 
 
@@ -39,9 +39,13 @@ In this section, list and describe the features or functionality that you are wo
 
 Include more detailed information about Feature 1 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
 
+This is a search feature where users or customers can browse what type of flower they are looking to buy. We have a table list of flower names that can be returned when the user or customer input is in our list
+
 ### Feature 2
 
 Include more detailed information about Feature 2 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
+
+ Customers are welcomed to create accounts with us and make their shopping easy
 
 ### Feature 3
 
@@ -53,13 +57,25 @@ Include more detailed information about Feature 3 here. Provide links to related
 
 List the database tables that are part of your project. 
 
-- Table 1 (Created By): Table Name 
-- Table 2 (Created By): Table Name 
-- Table 3 (Created By): Table Name 
+- Table 1 (): customer
 
-> Include the ER Diagram of the database. 
+- Table 2 (): products
 
----
+- Table 3 (): orders
+
+- Table 4 (): payment
+   
+
+> Include the ER Diagram of the database.
+>
+The ER diagram shows how an order is associated with one customer and one product.
+A customer can have multiple orders and pay for them using various payment methods.
+A payment can be associated with one order and one customer.
+A product can be part of multiple orders.
+The diagram shows a many-to-one relationship between orders and customers, orders and products, and payment and customers
+> ![Screenshot (29)](https://github.com/atenidkoye/Team28/assets/113510892/93dacb73-6783-440f-aba4-d28a8e574016)
+
+
 
 ## Created Forms
 
