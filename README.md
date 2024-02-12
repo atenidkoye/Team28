@@ -57,13 +57,13 @@ Include more detailed information about Feature 3 here. Provide links to related
 
 List the database tables that are part of your project. 
 
-- Table 1 (): customer
+- Table 1: customer
 
-- Table 2 (): products
+- Table 2: products
 
-- Table 3 (): orders
+- Table 3: orders
 
-- Table 4 (): payment
+- Table 4: payment
    
 
 > Include the ER Diagram of the database.
@@ -73,7 +73,8 @@ A customer can have multiple orders and pay for them using various payment metho
 A payment can be associated with one order and one customer.
 A product can be part of multiple orders.
 The diagram shows a many-to-one relationship between orders and customers, orders and products, and payment and customers
-> ![Screenshot (29)](https://github.com/atenidkoye/Team28/assets/113510892/93dacb73-6783-440f-aba4-d28a8e574016)
+> ![Screenshot (29)](https://github.com/atenidkoye/Team28/assets/113510892/3a42bd70-b0dd-4d8d-b8ae-83ff3da200ed)
+
 
 
 
