@@ -6,11 +6,12 @@
     <title>Search Results</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f1e8dd;
-            padding: 100px;
-            margin: inherit;
-            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            min-height: 100vh;
+            background: url(/images/pexels-jess-bailey-designs-1172849.jpg) no-repeat;
+            background-size: cover;
+            background-position: center;
         }
         .container {
             max-width: 400px;

@@ -16,7 +16,7 @@ include 'includes/header.php';
         <div class="box-container">
             <div class="box">
                 <div class="image">
-                    <img src="/images/flowervase.webp" alt="flowervase">
+                    <img src="images/flowervase.webp" alt="">
                     <div class="icons">
                         <a href="#" class="cart-btn"> add to cart</a>
                     </div>
@@ -29,7 +29,7 @@ include 'includes/header.php';
 
             <div class="box">
                 <div class="image">
-                    <img src="/images/angelina-jollivet-mNEpmNiFdXs-unsplash.jpg" alt="">
+                    <img src="images/angelina-jollivet-mNEpmNiFdXs-unsplash.jpg" alt="">
                     <div class="icons">
                         <a href="#" class="cart-btn"> add to cart</a>
                     </div>
