@@ -37,9 +37,7 @@ In this section, list and describe the features or functionality that you are wo
 
 ### Feature 1
 
-Include more detailed information about Feature 1 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
-
-This is a search feature where users or customers can browse what type of flower they are looking to buy. We have a table list of flower names that can be returned when the user or customer input is in our list
+This is a search feature where users or customers can browse what type of flower they are looking to buy. We have a table list of flower names that can be returned when the user or customer input it in our list
 
 ### Feature 2
 
