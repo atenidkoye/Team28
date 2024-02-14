@@ -37,9 +37,7 @@ In this section, list and describe the features or functionality that you are wo
 
 ### Feature 1
 
-Include more detailed information about Feature 1 here. Provide links to related code files (github) & link to the feature (shell.hamk.fi) .
-
-This is a search feature where users or customers can browse what type of flower they are looking to buy. We have a table list of flower names that can be returned when the user or customer input is in our list
+This is a search feature where users or customers can browse what type of flower they are looking to buy. We have a table list of flower names that can be returned when the user or customer input it in our list
 
 ### Feature 2
 
@@ -57,13 +55,13 @@ Include more detailed information about Feature 3 here. Provide links to related
 
 List the database tables that are part of your project. 
 
-- Table 1 (): customer
+- Table 1: customer
 
-- Table 2 (): products
+- Table 2: products
 
-- Table 3 (): orders
+- Table 3: orders
 
-- Table 4 (): payment
+- Table 4: payment
    
 
 > Include the ER Diagram of the database.
@@ -73,7 +71,8 @@ A customer can have multiple orders and pay for them using various payment metho
 A payment can be associated with one order and one customer.
 A product can be part of multiple orders.
 The diagram shows a many-to-one relationship between orders and customers, orders and products, and payment and customers
-> ![Screenshot (29)](https://github.com/atenidkoye/Team28/assets/113510892/93dacb73-6783-440f-aba4-d28a8e574016)
+> ![Screenshot (29)](https://github.com/atenidkoye/Team28/assets/113510892/3a42bd70-b0dd-4d8d-b8ae-83ff3da200ed)
+
 
 
 
@@ -81,7 +80,7 @@ The diagram shows a many-to-one relationship between orders and customers, order
 
 List and describe any forms that have been created as part of your project. Include details about the purpose of each form and any validation logic.
 
-- Form 1 (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi). | Validations Applied
+- Form 1 (NJOKU NELSON): Search |  Validations Applied
 - Form 2: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi).  | Validations Applied
 - Form 3: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi).  | Validations Applied
 
@@ -92,7 +91,7 @@ List and describe any forms that have been created as part of your project. Incl
 
 List any tables that you have created in the project work
 
-- Table 1 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
+- Table 1 (NJOKU NELSON): Products | Tables were created in the database 
 - Table 2 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
 - Table 3 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
 
