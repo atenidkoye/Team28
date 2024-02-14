@@ -287,3 +287,7 @@ header .icons a:hover{
     padding-top: 1rem;
     text-decoration: line-through;
 }
+
+.error {
+    color: red;
+  }
