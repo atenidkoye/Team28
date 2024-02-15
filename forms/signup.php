@@ -46,6 +46,8 @@
 </head>
 <body>
 
+
+
   <form id="myForm" method="POST" action='/Team28/process1.php' onsubmit="return validateForm()">
     <label for="fname">Fullname:</label>
     <input type="text" id="fname" name="username">
@@ -71,7 +73,7 @@
 
     <br>
 
-    <!-- Hidden input for submit button -->
+ 
     <input type="hidden" name="submit" value="submit">
 
     <input type="submit" value="submit">
@@ -106,7 +108,11 @@
         return false;
       }
 
-      return true;
+     return true;
+    }
+
+    if(validateForm){
+        alert ('form submitted successfuly');
     }
   </script>
 </body>

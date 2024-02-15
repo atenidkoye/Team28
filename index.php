@@ -18,7 +18,7 @@ include 'includes/header.php';
                 <div class="image">
                     <img src="images/flowervase.webp" alt="">
                     <div class="icons">
-                        <a href="" class="cart-btn">Buy Now</a>
+                        <a href='forms/payment.php' class="cart-btn">Buy Now</a>
                     </div>
                 </div>
                 <div class="content">
@@ -31,7 +31,7 @@ include 'includes/header.php';
                 <div class="image">
                     <img src="images/angelina-jollivet-mNEpmNiFdXs-unsplash.jpg" alt="">
                     <div class="icons">
-                        <a href="Team28/forms/payment.php" class="cart-btn"> Buy now</a>
+                        <a href='forms/payment.php'class="cart-btn"> Buy now</a>
                     </div>
                 </div>
                 <div class="content">
@@ -44,7 +44,7 @@ include 'includes/header.php';
                 <div class="image">
                     <img src="images/Tulips.jpg" alt="">
                     <div class="icons">
-                        <a href="src/Team28/forms/payment.php" class="cart-btn">Buy Now</a>
+                        <a href='forms/payment.php' class="cart-btn">Buy Now</a>
                     </div>
                 </div>
                 <div class="content">
@@ -57,7 +57,7 @@ include 'includes/header.php';
                 <div class="image">
                     <img src="images/img3.jpg" alt="">
                     <div class="icons">
-                        <a href="Team28/forms/payment.php" class="cart-btn">Buy Now</a>
+                        <a href='forms/payment.php' class="cart-btn">Buy Now</a>
                     </div>
                 </div>
                 <div class="content">
@@ -71,7 +71,7 @@ include 'includes/header.php';
                 <div class="image">
                     <img src="images/img2.jpg" alt="">
                     <div class="icons">
-                        <a href="Team28/forms/payment.php" class="cart-btn">Buy Now</a>
+                        <a href='forms/payment.php' class="cart-btn">Buy Now</a>
                     </div>
                 </div>
                 <div class="content">

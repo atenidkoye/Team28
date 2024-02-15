@@ -6,6 +6,40 @@
   <link rel="stylesheet" href="style.css">
   <title>Login Form</title>
   <style>
+
+#myForm {
+      width: 300px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049;
+    }
     
   </style>
 </head>
@@ -19,7 +53,7 @@
     <br>
 
     <label for="password">Email</label>
-    <input type="Email" id="password" name="password">
+    <input type="text" id="password" name="password">
     <span id="passwordError" class="error"></span>
 
     <br>
