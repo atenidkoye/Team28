@@ -23,11 +23,12 @@
                 </div>
 
                 <div class="button">
-                <a href="/team28/forms/login.php">
-                   <button class="btn1">Login</button>
-               </a>
-
-                    <button class="btn1">SignUp</button>
+                    <a href="/team28/forms/login.php">
+                     <button class="btn1">Login</button>
+                    </a>
+                    <a href="/team28/forms/login.php">
+                     <button class="btn1">SignUp</button>
+                    </a>
                 </div>
             </div>    
         </nav>

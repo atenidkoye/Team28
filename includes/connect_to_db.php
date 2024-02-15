@@ -2,7 +2,7 @@
 $servername = 'phptask-db-1'; // Database host --Change servername to your servername
 $username = 'Team_28'; // Database username
 $password = 'password'; // Database password
-$database = 'Team28'; // Database name
+$database = 'Team 28'; // Database name
 
 // Create a database connection
 $conn = new mysqli($servername, $username, $password, $database);
