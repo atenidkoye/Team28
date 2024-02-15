@@ -15,7 +15,7 @@
             <div class="container">
                 <div class="search-bar">
                     <form method="GET" action='/Team28/process2.php'>
-                        <input type="search" name="query" placeholder="search">
+                        <input id="query" type="search" name="query" placeholder="search">
                         <button type="submit">
                             <span class="material-symbols-outlined">search</span>
                         </button>
