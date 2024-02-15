@@ -1,6 +1,6 @@
 <?php
 $servername = 'phptask-db-1'; // Database host --Change servername to your servername
-$username = 'Team28'; // Database username
+$username = 'Team_28'; // Database username
 $password = 'password'; // Database password
 $database = 'Team28'; // Database name
 

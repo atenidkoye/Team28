@@ -40,14 +40,20 @@
     </div>
 
     <script>
-    // Function to validate the form
+    
     function validateForm() {
-      // Get form elements
-      var username = document.getElementById('username').value;
-      var password = document.getElementById('password').value;
+    
+      var username = document.getElementById('fname').value;
+      var password = document.getElementById('lname').value;
+      var password = document.getElementById('number').value;
+      var password = document.getElementById('expiry').value;
+      var password = document.getElementById('ccv').value;
 
       // Reset error messages
-      document.getElementById('usernameError').innerHTML = '';
+      document.getElementById('NameError').innerHTML = 'Name Required';
+      document.getElementById('lname').innerHTML = 'Last Name Required';
+      document.getElementById('numError').innerHTML = 'card number Required';
+      document.getElementById('passwordError').innerHTML = '';
       document.getElementById('passwordError').innerHTML = '';
 
       // Validate username
@@ -73,7 +79,7 @@
 
       // Validate the form
       if (validateForm()) {
-        // If the form is valid, you can submit it or perform other actions
+        
         alert('Form submitted successfully!');
       }
     });

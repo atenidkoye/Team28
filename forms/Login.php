@@ -11,15 +11,15 @@
 </head>
 <body>
 
-  <form id="myForm" action="process.php" method="post">
-    <label for="username">Username:</label>
-    <input type="text" id="username" name="username">
+  <form id="myForm" action="" method="GET">
+    <label for="username">fullname:</label>
+    <input type="text" id="username" name="fullname">
     <span id="usernameError" class="error"></span>
 
     <br>
 
-    <label for="password">Password:</label>
-    <input type="password" id="password" name="password">
+    <label for="password">Email</label>
+    <input type="Email" id="password" name="password">
     <span id="passwordError" class="error"></span>
 
     <br>

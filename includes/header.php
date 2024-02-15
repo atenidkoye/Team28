@@ -23,7 +23,10 @@
                 </div>
 
                 <div class="button">
-                    <button class="btn1">Login</button>
+                <a href="/team28/forms/login.php">
+                   <button class="btn1">Login</button>
+               </a>
+
                     <button class="btn1">SignUp</button>
                 </div>
             </div>    
