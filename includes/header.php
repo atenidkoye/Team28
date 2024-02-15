@@ -24,7 +24,7 @@
 
                 <div class="button">
                     <button class="btn1">Login</button>
-                    <button class="btn1">SignUp</button>
+                    <button  class="btn1" ><a href="/Team28/forms/signup.php" class="btn1">sign up</a></button>
                 </div>
             </div>    
         </nav>

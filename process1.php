@@ -2,14 +2,14 @@
 // what to do with the data
 
 if (isset($_POST["submit"])) {
-    $f_name = $_POST['name'];
+    $f_name = $_POST['username'];
     $email = $_POST['email'];
     $phone = $_POST['phone'];
     $address = $_POST['address'];
 
 
 // connect to database
-include 'connect_to_db.php';
+include 'includes/connect_to_db.php';
 
 // insert sql statement
 
