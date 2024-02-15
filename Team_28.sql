@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: db
--- Generation Time: Feb 15, 2024 at 09:50 PM
+-- Generation Time: Feb 15, 2024 at 10:05 PM
 -- Server version: 8.1.0
 -- PHP Version: 8.2.8
 
@@ -303,7 +303,9 @@ CREATE TABLE `payment` (
   `email` varchar(255) NOT NULL,
   `card_number` varchar(16) NOT NULL,
   `expiry_date` varchar(5) NOT NULL,
-  `cvv` varchar(3) NOT NULL
+  `cvv` varchar(3) NOT NULL,
+  `customer_id` int DEFAULT NULL,
+  `product_id` int DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 -- --------------------------------------------------------
@@ -416,7 +418,9 @@ ALTER TABLE `customers`
 -- Indexes for table `payment`
 --
 ALTER TABLE `payment`
-  ADD PRIMARY KEY (`payment_id`);
+  ADD PRIMARY KEY (`payment_id`),
+  ADD KEY `customer_id` (`customer_id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `products`
@@ -445,6 +449,17 @@ ALTER TABLE `payment`
 --
 ALTER TABLE `products`
   MODIFY `product_id` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=79;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `payment`
+--
+ALTER TABLE `payment`
+  ADD CONSTRAINT `payment_ibfk_1` FOREIGN KEY (`customer_id`) REFERENCES `customers` (`customer_id`),
+  ADD CONSTRAINT `payment_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`product_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
