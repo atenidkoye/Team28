@@ -12,15 +12,14 @@ We have an online flower shop where customers can browse and purchase a variety 
   4. Payment method: Customers are provided with a secure channel of making payments
 - [Database Tables](#database-tables)
 - customer Table
-- Orders Table
 - Products Table
 - Payment Table
 - 
 - [Created Forms](#created-forms)
-- customer Form
-- Orders Form
-- Products Form
+- search Form
 - Payment Form
+- login form
+- signup form
 - [Created Tables](#created-tables)
 
 ---
@@ -29,9 +28,10 @@ We have an online flower shop where customers can browse and purchase a variety 
 
 In this section, list and describe the features or functionality that you are working on. You can use checkboxes to track the progress of each feature.
 
-- [ ] Feature 1 (Full Name): Search Option. 
-- [ ] Feature 2 (Full Name): Sign Up/ Sign In.
-- [ ] Feature 3 (Full Name): Payment method.
+- [ ] Feature 1 (Nelson Njoku): Search Option. 
+- [ ] Feature 2 (Cheo Clovis Ngu): Sign Up
+- [ ] Feature 3 (Blessing Omorojie): Payment method.
+- [ ] Feature 3 (Abraham Atenidkoye): Payment method.
 
 > Add features as required. 
 
@@ -71,7 +71,8 @@ A customer can have multiple orders and pay for them using various payment metho
 A payment can be associated with one order and one customer.
 A product can be part of multiple orders.
 The diagram shows a many-to-one relationship between orders and customers, orders and products, and payment and customers
-> ![Screenshot (29)](https://github.com/atenidkoye/Team28/assets/113510892/3a42bd70-b0dd-4d8d-b8ae-83ff3da200ed)
+![Screenshot 2024-02-16 101546](https://github.com/atenidkoye/Team28/assets/143082313/38778c79-9b92-447a-8179-15ca5b078553)
+
 
 
 
