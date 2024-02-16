@@ -110,10 +110,6 @@
 
      return true;
     }
-
-    if(validateForm){
-        alert ('form submitted successfuly');
-    }
   </script>
 </body>
 </html>
