@@ -45,7 +45,7 @@
 </head>
 <body>
 
-  <form id="myForm" action="" method="GET">
+  <form id="myForm" action="Team28/process4.php" method="GET">
     <label for="username">fullname:</label>
     <input type="text" id="username" name="fullname">
     <span id="usernameError" class="error"></span>
