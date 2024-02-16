@@ -50,7 +50,7 @@
 <body>
     
         <h2>Secure Payment</h2>
-        <form id="myForm" action="process3.php" method="post">
+        <form id="myForm" action="Team28/process3.php" method="post">
 
             <label for="name">Full Name:</label>
             <input   type="text" id="fname" name="name" required>
@@ -80,7 +80,7 @@
             
         </form>
 
-    <script>
+        <script>
     
     function validateForm() {
     
@@ -137,6 +137,8 @@
       }
     });
   </script>
+
+    
 
 </body>
 </html>

@@ -7,7 +7,7 @@ if (isset($_GET["submit"])) {
 
 
 // connect to database
-include 'connect_to _db.php';
+include 'connect_to_db.php';
 
 // insert sql statement
 

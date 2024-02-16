@@ -50,7 +50,7 @@
 
   <form id="myForm" method="POST" action='/Team28/process1.php' onsubmit="return validateForm()">
     <label for="fname">Fullname:</label>
-    <input type="text" id="fname" name="username">
+    <input type="text" id="fname" name="name">
     <span id="fullnameError" class="error"></span>
 
     <br>
