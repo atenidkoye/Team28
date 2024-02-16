@@ -21,13 +21,7 @@
             <div class="container">
                 <div class="search-bar">
                     <form method="GET" action='/Team28/process2.php'>
-<<<<<<< HEAD
-                        <input type="search" id="search" name="query" placeholder="search">
-                        <span id="addressError" class="error"></span>
-
-=======
                         <input id="query" type="search" name="query" placeholder="search">
->>>>>>> b6863f38b3896adf25179857184273e87ee9b420
                         <button type="submit">
                             <span id="SearchError" class="material-symbols-outlined">search</span>
                         </button>
@@ -59,10 +53,6 @@
             }
 
             return true;
-          }
-
-            if(SearchValidate){
-             alert ('form submitted successfuly');
-            }     
+          }     
   </script>
 

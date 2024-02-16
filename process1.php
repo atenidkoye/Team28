@@ -9,7 +9,7 @@ if (isset($_POST["submit"])) {
 
 
 // connect to database
-include 'connect_to _db.php';
+include 'includes/connect_to_db.php';
 
 // insert sql statement
 
