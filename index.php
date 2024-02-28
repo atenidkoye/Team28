@@ -12,7 +12,7 @@ include 'includes/header.php';
     </section>
 
     <section class="products" id="products">
-        <h1 class="heading">Our<span>Catalog</span></h1>
+        <h1 class="heading">Our<span> Catalog</span></h1>
         <div class="box-container">
             <div class="box">
                 <div class="image">

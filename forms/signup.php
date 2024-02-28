@@ -1,115 +1,93 @@
+<?php
+include '../includes/top.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sign up</title>
-  <style>
-    .error {
-      color: red;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
 
-    #myForm {
-      width: 300px;
-      margin: 0 auto;
-      font-family: Arial, sans-serif;
-    }
+        .signup-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .signup-form {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 4px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+        .signup-form h2 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .signup-form-form {
+            display: flex;
+            flex-direction: column;
+        }
+        .signup-form-form input[type="text"], .signup-form-form input[type="password"] {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .signup-form-form button[type="submit"] {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function validateForm() {
+            var name = document.forms["signup-form"]["name"].value;
+            var email = document.forms["signup-form"]["email"].value;
+            var password = document.forms["signup-form"]["password"].value;
+            var repeatPassword = document.forms["signup-form"]["pssrepeat"].value;
 
-    label {
-      display: block;
-      margin-bottom: 5px;
-    }
+            // Basic validation
+            if (name === "" || email === "" || password === "" || repeatPassword === "") {
+                alert("All fields must be filled out");
+                return false;
+            }
 
-    input[type="text"] {
-      width: 100%;
-      padding: 8px;
-      margin-bottom: 10px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      box-sizing: border-box;
-    }
+            // Check if passwords match
+            if (password !== repeatPassword) {
+                alert("Passwords do not match");
+                return false;
+            }
 
-    input[type="submit"] {
-      width: 100%;
-      padding: 10px;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    input[type="submit"]:hover {
-      background-color: #45a049;
-    }
-  </style>
+            return true;
+        }
+    </script>
 </head>
 <body>
-
-
-
-  <form id="myForm" method="POST" action='/Team28/process1.php' onsubmit="return validateForm()">
-    <label for="fname">Fullname:</label>
-    <input type="text" id="fname" name="name">
-    <span id="fullnameError" class="error"></span>
-
-    <br>
-  
-    <label for="email">Email:</label>
-    <input type="text" id="email" name="email">
-    <span id="emailError" class="error"></span>
-
-    <br>
-
-    <label for="address">Address:</label>
-    <input type="text" id="address" name="address">
-    <span id="addressError" class="error"></span>
-
-    <br>
-
-    <label for="phone">Phone:</label>
-    <input type="text" id="phone" name="phone">
-    <span id="phoneError" class="error"></span>
-
-    <br>
-
- 
-    <input type="hidden" name="submit" value="submit">
-
-    <input type="submit" value="submit">
-  </form>
-
-  <script>
-    function validateForm() {
-      var fname = document.getElementById('fname').value;
-      var email = document.getElementById('email').value;
-      var phone = document.getElementById('phone').value;
-      var address = document.getElementById('address').value;
-
-      document.getElementById('fullnameError').innerHTML = '';
-      document.getElementById('emailError').innerHTML = '';
-      document.getElementById('phoneError').innerHTML = '';
-      document.getElementById('addressError').innerHTML = '';
-
-      if (fname.trim() === '') {
-        document.getElementById('fullnameError').innerHTML = 'Fullname is required';
-        return false;
-      }
-      if (email.trim() === '') {
-        document.getElementById('emailError').innerHTML = 'Email is required';
-        return false;
-      }
-      if (phone.trim() === '') {
-        document.getElementById('phoneError').innerHTML = 'Phone is required';
-        return false;
-      }
-      if (address.trim() === '') {
-        document.getElementById('addressError').innerHTML = 'Address is required';
-        return false;
-      }
-
-     return true;
-    }
-  </script>
+    <div class="signup-container">
+        <section class="signup-form">
+            <h2>Sign Up</h2>
+            <div class="signup-form-form">
+                <form id="signup-form" action="../process1.php" method="post" onsubmit="return validateForm()">
+                    <input type="text" name="name" placeholder="Full name">
+                    <input type="text" name="email" placeholder="Email">
+                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="pssrepeat" placeholder="Repeat password">
+                    <button type="submit" name="submit">Sign Up</button>
+                </form>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
