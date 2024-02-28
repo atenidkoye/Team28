@@ -1,30 +1,41 @@
 <?php
-// what to do with the data
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $name = $_POST["name"];
+    $email = $_POST["email"];
+    $password = $_POST["password"];
+    $pssRepeat = $_POST["pssrepeat"];
 
-if (isset($_POST["submit"])) {
-    $f_name = $_POST['name'];
-    $email = $_POST['email'];
-    $phone = $_POST['phone'];
-    $address = $_POST['address'];
+    // Basic server-side validation
+    if (empty($name) || empty($email) || empty($password) || empty($pssRepeat)) {
+        echo "All fields must be filled";
+        exit(); 
+    }
 
+    if ($password !== $pssRepeat) {
+        echo "Passwords do not match";
+        exit(); 
+    }
+    
 
-// connect to database
-include 'includes/connect_to_db.php';
+    // Hash the password
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-// insert sql statement
+    // Connect to database
+    require_once 'includes/connect_to_db.php'; 
 
-$sql = "insert into customers(name, email, phone_number, address)
-        values ('$f_name', '$email', '$phone', '$address')";
+    // Insert SQL statement
+    $sql = "INSERT INTO customers (name, email, cust_pass) VALUES ('$name', '$email', '$hashedPassword')";
 
-if ($conn->query($sql)===TRUE) {
-    echo "Successful";
-}
-else {
-    echo "Error:" .$sql . "<bt>" . $conn->error;
-}
+    if ($conn->query($sql) === TRUE) {
+        echo "Registration Successful";
+    } else {
+        echo "Error: " . $sql . "<br>" . $conn->error;
+    }
 
-// close database connection
-
-$conn->close();
+    // Close database connection
+    $conn->close();
+} else {
+    header("location: /forms/signup.php");
+    exit();
 }
 ?>

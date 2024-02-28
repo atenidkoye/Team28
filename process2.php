@@ -51,7 +51,7 @@ include 'includes/top.php';
                 $search_query = $_GET['query'];
 
                 // Connect to your database
-                include  'includes/connect_to_db.php';
+                include 'includes/connect_to_db.php';
 
                 // Query to search for items matching the search query
                 $sql = "SELECT DISTINCT(flower), price FROM products WHERE flower LIKE '%$search_query%'";
