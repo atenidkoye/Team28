@@ -1,3 +1,28 @@
+<?php
+    include 'connect_to_db.php';
+    session_start();
+    $user_id = $_SESSION['user_name'];
+    
+
+
+    if(!isset($user_id)){
+        header('location: login.php');
+    }
+
+    // $admin_id = $_SESSION['admin_name'];
+
+
+    if(isset($_POST['logout'])) {
+        session_destroy();
+        header('location: login.php');
+        exit();
+    }
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,9 +42,17 @@
 
         </nav>
         <div class="icons">
-            <a href="#" class="fas fa-search"></a>
-            <a href="#" class="fas fa-shopping-cart"></a>
-            <a href="signup.php" class="fas fa-user" id="user-btn"></a>
+            <i class="fas fa-search"></i>
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-user" id="user-btn"></i>
+        </div>
+
+        <div class="user-box">
+            <p>Username : <span><?php echo $_SESSION['user_name'] ?></span></p>
+            <p>Email : <span><?php echo $_SESSION['user_email']; ?></span></p>
+            <form method="post">
+                <button type="submit" name="logout" class="logout-btn">Log out</button>
+            </form>
         </div>
     </header>
 
@@ -66,5 +99,6 @@
             ?>
         </div>
     </section>
+    <script type="text/javascript" src="script.js"></script>
 
    

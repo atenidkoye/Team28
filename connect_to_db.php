@@ -1,8 +1,8 @@
 <?php
-$servername = 'website-db-1'; // Database host --Change servername to your servername
-$username = 'flowershop'; // Database username
-$password = 'password'; // Database password
-$database = 'flowershop'; // Database name
+$servername = ''; // Database host --Change servername to your servername
+$username = ''; // Database username
+$password = ''; // Database password
+$database = ''; // Database name
 
 // Create a database connection
 $conn = new mysqli($servername, $username, $password, $database);
