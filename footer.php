@@ -1,9 +1,8 @@
-<footer>
 <section class="about" id="about">
         <h1 class="heading"><span>about</span> us</h1>
         <div class="new">
             <div class="img-container">
-                <img src="images/pexels-татьяна-чернышова🍒-3914589.jpg">
+                <img src="/images/pexels-татьяна-чернышова🍒-3914589.jpg">
                 <!-- <h3>We are TEAM28, best flower sellers</h3> -->
             </div>
             
@@ -17,6 +16,5 @@
             </div>
         </div>
     </section>
-</footer>
 </body>
 </html>

@@ -1,41 +1,27 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $password = $_POST["password"];
-    $pssRepeat = $_POST["pssrepeat"];
+include 'connect_to_db.php';
 
-    // Basic server-side validation
-    if (empty($name) || empty($email) || empty($password) || empty($pssRepeat)) {
-        echo "All fields must be filled";
-        exit(); 
-    }
+if (isset($_POST['submit-btn'])){
+    $name = mysqli_real_escape_string($conn, filter_var($_POST['name'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+    $email = mysqli_real_escape_string($conn, filter_var($_POST['email'], FILTER_SANITIZE_EMAIL));
+    $password = mysqli_real_escape_string($conn, filter_var($_POST['password'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT); // Hash the password
+    $rptpassword = mysqli_real_escape_string($conn, filter_var($_POST['rptpassword'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
 
-    if ($password !== $pssRepeat) {
-        echo "Passwords do not match";
-        exit(); 
-    }
-    
+    $select_user = mysqli_query($conn, "SELECT * FROM `users` where email = '$email'") or die('Query not passed');
 
-    // Hash the password
-    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
-
-    // Connect to database
-    require_once 'includes/connect_to_db.php'; 
-
-    // Insert SQL statement
-    $sql = "INSERT INTO customers (name, email, cust_pass) VALUES ('$name', '$email', '$hashedPassword')";
-
-    if ($conn->query($sql) === TRUE) {
-        echo "Registration Successful";
+    if (mysqli_num_rows($select_user) > 0){
+        $message[] = 'User already exists';
     } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
+        if ($password !== $rptpassword){
+            $message[] = 'Passwords do not match';
+        } else {
+            mysqli_query($conn, "INSERT INTO `users`(`name`, `email`, `password`) 
+                VALUES ('$name', '$email','$hashedPassword')") or die('Query has failed');
+            $message[] = 'Registration successful';
+            header("Location: register.php");
+            exit();
+        }
     }
-
-    // Close database connection
-    $conn->close();
-} else {
-    header("location: /forms/signup.php");
-    exit();
 }
 ?>

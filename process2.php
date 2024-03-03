@@ -1,80 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Search Results</title>
-    <style>
-        body {
-            display: flex;
-            align-items: center;
-            min-height: 100vh;
-            background: url(/images/pexels-jess-bailey-designs-1172849.jpg) no-repeat;
-            background-size: cover;
-            background-position: center;
-        }
-        .container {
-            max-width: 400px;
-            margin: inherit;
-            background-color: #fff;
-            border-radius: 20px;
-            padding: 20px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        h2 {
-            margin-top: 0;
-        }
-        .result {
-            margin-bottom: 10px;
-            padding: 10px;
-            border: 1px solid black;
-            border-radius: 10px;
-        }
-        .result p {
-            margin: 0;
-        }
-        .no-result {
-            color: red;
-        }
-    </style>
-</head>
-<body>
 <?php
-include 'includes/top.php';
-?>
-    <div class="container">
-        <h2>Search Results</h2>
-        <?php
-            // Check if the search query parameter is set and not empty
-            if (isset($_GET['query']) && !empty($_GET['query'])) {
-                // Get the search query from the URL parameter
-                $search_query = $_GET['query'];
+include 'connect_to_db.php';
 
-                // Connect to your database
-                include 'includes/connect_to_db.php';
+session_start();
 
-                // Query to search for items matching the search query
-                $sql = "SELECT DISTINCT(flower), price FROM products WHERE flower LIKE '%$search_query%'";
+if (isset($_POST['submit-btn'])){
+    $filter_email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
+    $email = mysqli_real_escape_string($conn, $filter_email);
+   
+    $filter_password = filter_var($_POST['password'], FILTER_SANITIZE_STRING);
+    $password = mysqli_real_escape_string($conn, $filter_password);
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-                $result = $conn->query($sql);
+    $select_user = mysqli_query($conn, "SELECT * FROM `users` where email = '$email'") or die('Query not passed');
 
-                if ($result->num_rows > 0) {
-                    // Output data of each row
-                    while($row = $result->fetch_assoc()) {
-                        echo '<div class="result">';
-                        echo '<p><strong>Flower:</strong> ' . $row["flower"] . ' - <strong>Price:</strong> €' . $row["price"] . '</p>';
-                        echo '</div>';
-                    }
-                } else {
-                    echo '<p class="no-result">No result(s)</p>';
-                }
-                $conn->close();
-            } else {
-                // If the user did not input anything but clicked the search button
-                echo '<p class="no-result">Please enter flower name</p>';
+    if (mysqli_num_rows($select_user)>0){
+        $user = mysqli_fetch_assoc($select_user);
+        if (password_verify($password, $user['password'])) {
+            if ($user['user_type']== 'admin'){
+                $_SESSION['admin_name'] = $user['name'];
+                $_SESSION['admin_email'] = $user['email'];
+                $_SESSION['admin_id'] = $user['id'];
+                header('location: admin.php');
+            }else if ($user['user_type']== 'user'){
+                $_SESSION['user_name'] = $user['name'];
+                $_SESSION['user_email'] = $user['email'];
+                $_SESSION['user_id'] = $user['id'];
+                header('location: index.php');
             }
-        ?>
-    </div>
-
-</body>
-</html>
+        } else {
+            $message[] = 'incorrect email or password';
+        }
+    }
+}
+?>
