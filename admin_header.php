@@ -21,8 +21,8 @@
                 <i class="fa-solid fa-list" id="menu-btn"></i>
             </div>
             <div class="user-box">
-                <p>Username : <span><?php echo $_SESSION['admin_name'] ?></span></p>
-                <p>Email : <span><?php echo $_SESSION['admin_email']; ?></span></p>
+                <p>Username: <span><?php echo $_SESSION['admin_name'] ?></span></p>
+                <p>Email: <span><?php echo $_SESSION['admin_email']; ?></span></p>
                 <form method="post">
                     <button type="submit" name="logout" class="logout-btn">Log out</button>
                 </form>

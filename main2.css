@@ -5,7 +5,6 @@
     outline: none;
     border: none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 }
 
@@ -163,6 +162,54 @@ header .icons a:hover{
     color: var(--black)
 }
 
+header .icons i:hover{
+    color: #cf0d0d;
+    text-decoration: none;
+}
+
+.icons{
+    display: flex;
+}
+.icons i{
+    margin-left: 1.2rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #000;
+}
+
+
+.user-box {
+    position: absolute;
+    top: 9px;
+    right: 9rem;
+    background: #fff;
+    box-shadow: var(--box-shadow);
+    padding: 1rem;
+    /* border: 1px solid #ccc; */
+    border-radius: .5rem;
+    width: auto;
+    text-align: center;
+    transform: scale(0);
+    transform-origin: top right;
+    margin-top: 5%;
+}
+
+.user-box p {
+    margin: 5px 0;
+}
+
+.logout-btn{
+    background: #6f6e6e;
+    color: #f1e8dd;
+    text-transform: uppercase;
+    width: 9rem;
+    border-radius: 4px;
+}
+.user-box.active{
+    transform: scale(1.0);
+    transition: .2s linear;
+}
+
 /* .products .box-container{
     display: flex;
     flex-wrap: wrap;
@@ -266,7 +313,7 @@ header .icons a:hover{
     top: 8%;
 }
 .left,
-right{
+.right{
     border: 1px solid #999;
     color: gray;
     padding: .5rem;
