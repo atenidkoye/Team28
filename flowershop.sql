@@ -40,21 +40,6 @@ CREATE TABLE `cart` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `message`
---
-
-CREATE TABLE `message` (
-  `id` int NOT NULL,
-  `user_id` int NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `number` varchar(255) NOT NULL,
-  `message` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `orders`
 --
 
@@ -100,21 +85,6 @@ CREATE TABLE `users` (
   `user_type` varchar(255) NOT NULL DEFAULT 'user'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
--- --------------------------------------------------------
-
---
--- Table structure for table `wishlist`
---
-
-CREATE TABLE `wishlist` (
-  `id` int NOT NULL,
-  `user_id` int NOT NULL,
-  `pid` int NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `price` varchar(255) NOT NULL,
-  `image` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-
 --
 -- Indexes for dumped tables
 --
@@ -123,12 +93,6 @@ CREATE TABLE `wishlist` (
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `message`
---
-ALTER TABLE `message`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -150,12 +114,6 @@ ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `wishlist`
---
-ALTER TABLE `wishlist`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -163,12 +121,6 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `message`
---
-ALTER TABLE `message`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 
 --
@@ -187,12 +139,6 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `wishlist`
---
-ALTER TABLE `wishlist`
   MODIFY `id` int NOT NULL AUTO_INCREMENT;
 COMMIT;
 
