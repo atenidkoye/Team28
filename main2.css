@@ -23,7 +23,7 @@ section{
     display: flex;
     align-items: center;
     min-height: 100vh;
-    background: url(/images/pexels-jess-bailey-designs-1172849.jpg) no-repeat;
+    background: url(../images/pexels-jess-bailey-designs-1172849.jpg) no-repeat;
     background-size: cover;
     background-position: center;
 }

@@ -11,7 +11,7 @@
                 <h3>WHY US</h3>
                 <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, dolores vel. Ipsam laboriosam asperiores voluptatem magnam, similique consectetur unde maxime perspiciatis nemo dolores modi suscipit possimus iusto excepturi quo officiis.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis corrupti facere autem commodi. Saepe nemo consequuntur esse, voluptatem voluptas ducimus sapiente possimus deleniti veniam ipsam, provident dolorum delectus odio itaque.</p>
-                <a href='CusomerReviews.php' class="btn">Customer Reviews</a>
+               
 
             </div>
         </div>
