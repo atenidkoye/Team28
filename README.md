@@ -34,7 +34,7 @@ In this section, list and describe the features or functionality that you are wo
 > Add features as required. 
 
 ### Feature 1
-Created the admi dashboard where admin can CRUD products o the website
+Created the admin dashboard where admin can CRUD products o the website
 ### Feature 2
 I created the Sign up feature to create account for users with their email, full name and password which is already hashed. with this functionality the CRUD feature is achived. 
 
