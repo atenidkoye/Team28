@@ -19,7 +19,6 @@
         
     }
 
-    // Update review if form is submitted
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['update_review'])) {
         $review_id = $_POST['review_id'];
         $updated_comments = $_POST['edit_comments'];
@@ -33,7 +32,7 @@
         }
     }
 
-    // Delete review if requested
+  
     if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['delete_review'])) {
         $review_id = $_POST['review_id'];
 
@@ -46,7 +45,6 @@
         }
     }
 
-    // Fetch and display Customer_reviews from database
     $sql = "SELECT id, name, comments FROM Customer_reviews";
     $result = $conn->query($sql);
 
@@ -68,5 +66,5 @@
         echo "No Customer_reviews yet.";
     }
 
-    $conn->close(); // Close database connection
+    $conn->close();
     ?>
