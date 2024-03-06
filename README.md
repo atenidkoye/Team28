@@ -6,18 +6,15 @@ We have an online flower shop where customers can browse and purchase a variety 
 
 ## Table of Contents
 - [Features](#features)
-- 1. Search Option 
-  2. Account Creation
-  3. Cart: Customers can add as many items inside their shopping cart
-  4. Payment method: Customers are provided with a secure channel of making payments
+- 1.ADMIN   
+    
 - [Database Tables](#database-tables)
-- customer Table
-- Products Table
-- Payment Table
+- Products
+- Orders
+- Cart
+- Users
 - 
 - [Created Forms](#created-forms)
-- search Form
-- Payment Form
 - login form
 - signup form
 - [Created Tables](#created-tables)
@@ -28,7 +25,7 @@ We have an online flower shop where customers can browse and purchase a variety 
 
 In this section, list and describe the features or functionality that you are working on. You can use checkboxes to track the progress of each feature.
 
-- [ ] Feature 1 (Nelson Njoku): Search Option. 
+- [ ] Feature 1 (Nelson Njoku): Admin dashboard, Update, edit and delete products, display products on index page. 
 - [ ] Feature 2 (Cheo Clovis Ngu): Sign Up
 - [ ] Feature 3 (Blessing Omorojie): Login feature
 - [ ] Feature 3 (Abraham Atenidkoye): Payment method.
@@ -37,9 +34,7 @@ In this section, list and describe the features or functionality that you are wo
 > Add features as required. 
 
 ### Feature 1
-Created a search feature where products are hard coded into the database by the admin with pictures and same products are retirved with the search feature. 
-with this feature, the CRUD fucntionalty is achived, because you can create, read, update and delete from the database. i also added the admin dash board. 
-
+Created the admi dashboard where admin can CRUD products o the website
 ### Feature 2
 I created the Sign up feature to create account for users with their email, full name and password which is already hashed. with this functionality the CRUD feature is achived. 
 
@@ -77,7 +72,7 @@ The diagram shows a many-to-one relationship between orders and customers, order
 
 List and describe any forms that have been created as part of your project. Include details about the purpose of each form and any validation logic.
 
-- Form 1 (NJOKU NELSON): Search |  Validations Applied
+- Form 1 (NJOKU NELSON):  | https://github.com/atenidkoye/Team28/blob/main/admin.php , https://github.com/atenidkoye/Team28/blob/main/admin_product.php , https://github.com/atenidkoye/Team28/blob/main/index.php , https://github.com/atenidkoye/Team28/blob/main/header.php
 - Form 2: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi).  | Validations Applied
 - Form 3: (Created By): Form Name: Link to the related code file (github) | Link to the form (shell.hamk.fi).  | Validations Applied
 
@@ -88,7 +83,7 @@ List and describe any forms that have been created as part of your project. Incl
 
 List any tables that you have created in the project work
 
-- Table 1 (NJOKU NELSON): Products | Tables were created in the database 
+- Table 1 (NJOKU NELSON): products, Users | https://github.com/atenidkoye/Team28/blob/main/flowershop.sql | http://shell.hamk.fi/pma/index.php?route=/sql&pos=0&db=wp_nelson22000&table=users 
 - Table 2 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
 - Table 3 (Created By): Table Name | Link to the related code file (github) | Link to the table (shell.hamk.fi).
 
