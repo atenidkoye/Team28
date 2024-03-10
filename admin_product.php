@@ -120,7 +120,7 @@ include 'delete.php';
                 <p>price:€ <?php echo $fetch_products['price']; ?> </p>
                 <h4><?php echo $fetch_products['name']; ?> </h4>
                 <details><?php echo $fetch_products['product_detail']; ?></details>
-                <a href="admin_product.php?edit=<?php echo $fetch_products['id']; ?>" class="edit">Edit</a>
+<!--                 <a href="admin_product.php?edit=<?php echo $fetch_products['id']; ?>" class="edit">Edit</a> -->
                 <a href="admin_product.php?delete=<?php echo $fetch_products['id']; ?>" class="delete" 
                     onclick=" return confirm('Confirm Delete');">Delete</a>
             </div>
